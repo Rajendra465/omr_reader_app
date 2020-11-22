@@ -283,9 +283,13 @@ def hi(a,b,c,d,e,f,g,h):
 @app.get("/")
 async def hey():
     return "hi"    
+
 @app.post("/answ/")
 async def create_items(item: Item):
     temp = hi(item.A,item.B,item.C,item.D,item.Neg_Ques,item.Neg_Mrk,item.Pos_Mrk,item.Url_List)
-    @app.post("/analytics/")
-    async def create_item():
-        return temp
+    return
+
+@app.post("/analytics/")
+async def create_item(item: Item):
+    temp = hi(item.A,item.B,item.C,item.D,item.Neg_Ques,item.Neg_Mrk,item.Pos_Mrk,item.Url_List)
+    return temp
