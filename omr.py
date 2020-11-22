@@ -281,7 +281,7 @@ def hi(a,b,c,d,e,f,g,h):
 
     return data_send
 @app.get("/")
-async def hey()
+async def hey():
     return "hi"    
 @app.post("/answ/")
 async def create_items(item: Item):
