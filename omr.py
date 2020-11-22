@@ -280,7 +280,9 @@ def hi(a,b,c,d,e,f,g,h):
     "OMR_Efficiency":omr_eff}
 
     return data_send
-    
+@app.get("/")
+async def hey()
+    return "hi"    
 @app.post("/answ/")
 async def create_items(item: Item):
     temp = hi(item.A,item.B,item.C,item.D,item.Neg_Ques,item.Neg_Mrk,item.Pos_Mrk,item.Url_List)
